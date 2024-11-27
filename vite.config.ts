@@ -4,7 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/myworkshop/', // Make sure this matches your repository name
+  base: '/gitgud2024/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

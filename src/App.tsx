@@ -1,15 +1,34 @@
-import { teamMembers } from './data/team-members'
+import { teamMembers } from './data/team-members/index'
 import { Navbar } from './components/Navbar'
 import { ThemeProvider } from './components/ThemeProvider'
 import { MemberCard } from './components/MemberCard'
+import { Star } from 'lucide-react'
 
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 pointer-events-none" />
+        
+        <div className="absolute inset-0">
+          <Star className="absolute top-20 left-[20%] h-3 w-3 text-blue-500/20 animate-float" />
+          <Star className="absolute top-40 right-[30%] h-2 w-2 text-purple-500/20 animate-float" style={{ animationDelay: '1s' }} />
+          <Star className="absolute bottom-32 left-[60%] h-4 w-4 text-blue-500/20 animate-float" style={{ animationDelay: '2s' }} />
+        </div>
+
         <Navbar />
-        <main className="container mx-auto px-4 py-24">
-          <h1 className="text-4xl font-bold text-center mb-12">Our Team</h1>
+        <main className="container mx-auto px-4 py-24 relative">
+          <h1 className="text-4xl font-bold text-center mb-2">Our Team</h1>
+          <div className="text-center">
+            <p className="text-muted-foreground mb-2">
+              Meet our talented team members
+            </p>
+            <div className="flex justify-center gap-2 mb-12">
+              <span className="h-3 w-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 animate-pulse" />
+              <span className="h-3 w-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 animate-pulse" style={{ animationDelay: '0.2s' }} />
+              <span className="h-3 w-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 animate-pulse" style={{ animationDelay: '0.4s' }} />
+            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member) => (

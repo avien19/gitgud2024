@@ -93,16 +93,12 @@ git push --set-upstream origin my-branch
 
 ```
 # Create a new directory and initialize it with Git
-git init my-repo
-
-# Change directory
-cd my-repo
+git init
 
 # Create the first file (e.g., README.md)
-touch README.md
 
 # Stage the file
-git add README.md
+git add README.md or git add .
 
 # Commit the changes
 git commit -m "add README to initial commit"
@@ -111,8 +107,7 @@ git commit -m "add README to initial commit"
 git remote add origin [https://github.com/YOUR_USERNAME/YOUR-REPOSITORY-NAME.git](https://github.com/YOUR_USERNAME/YOUR-REPOSITORY-NAME.git)
 
 # Push changes to GitHub
-git push --set-upstream origin main
-Use code with caution.
+git push --set-upstream origin main [or replace --set-upstream with -u]
 ```
 
 ## Contributing to an Existing Branch on GitHub
@@ -120,9 +115,6 @@ Use code with caution.
 **Assuming you have an existing project and a new branch on GitHub:**
 
 ```
-# Change directory
-cd repo
-
 # Update local branches
 git pull
 
@@ -159,4 +151,4 @@ This model is ideal for open-source projects or projects where anyone can contri
 
 ***Download the Git Cheatsheet from GitHub Education:***
 
-[https://docs.github.com/en/get-started/getting-started-with-git/git-cheatsheet](https://docs.github.com/en/get-started/getting-started-with-git/git-cheatsheet)
+[https://drive.google.com/file/d/1Ka7FHwxS5zMYPZ4ENqvubnjKfJ41SVYm/view?usp=sharing](https://drive.google.com/file/d/1Ka7FHwxS5zMYPZ4ENqvubnjKfJ41SVYm/view?usp=sharing)
